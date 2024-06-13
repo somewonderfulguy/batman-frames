@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 const title = 'Batman Frames'
 const description = 'Images of Batman for Warpcast'
-const fcFrameImage = `${process.env.NEXT_PUBLIC_SITE_URL}/batman-00.jpg`
+const fcFrameImage = `${process.env.NEXT_PUBLIC_VERCEL_URL}/batman-00.jpg`
 
 export const metadata: Metadata = {
   title,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   other: {
     'fc:frame': 'vNext',
     'fc:frame:image': fcFrameImage,
-    'fc:frame:post_url': `${process.env.NEXT_PUBLIC_SITE_URL}/api/batman?id=1`,
+    'fc:frame:post_url': `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/batman?id=1`,
     'fc:frame:button:1': 'Start'
   }
 }
