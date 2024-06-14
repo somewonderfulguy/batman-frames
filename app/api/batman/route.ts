@@ -20,3 +20,5 @@ export const POST = async (req: NextRequest): Promise<Response> => {
       <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_SITE_URL}/api/batman?id=${nextId}" />
     </head></html>`)
 }
+
+export const dynamic = 'force-dynamic'
