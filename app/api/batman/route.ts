@@ -9,7 +9,7 @@ export const POST = async (req: NextRequest): Promise<Response> => {
 
   const nextId = isTheLast ? '00' : String(id + 1).padStart(2, '0')
   const buttonText = isTheLast ? 'Start Over' : 'Next Image'
-  const image = `${process.env.NEXT_PUBLIC_SITE_URL}/batman-${id}.jpg`
+  const image = `${process.env.NEXT_PUBLIC_SITE_URL}/batman-${nextId}.jpg`
 
   return new NextResponse(`<!DOCTYPE html><html><head>
       <title>This is frame ${id}</title>
@@ -17,7 +17,7 @@ export const POST = async (req: NextRequest): Promise<Response> => {
       <meta property="fc:frame" content="vNext" />
       <meta property="fc:frame:image" content="${image}" />
       <meta property="fc:frame:button:1" content="${buttonText}" />
-      <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_SITE_URL}/api/batman?id=${nextId}" />
+      <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_SITE_URL}/api/batman?id=${id}" />
     </head></html>`)
 }
 
