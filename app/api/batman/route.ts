@@ -8,7 +8,7 @@ export const POST = async (req: NextRequest): Promise<Response> => {
 
   const isTheLast = idNum === 4
 
-  const buttonText = isTheLast ? 'Start Over' : 'Next Image'
+  const buttonText = isTheLast ? 'Start Over rainbow emoji 🌈' : 'Next Image 🦇'
   const image = `${process.env.NEXT_PUBLIC_SITE_URL}/batman-${idStr}.jpg`
   const nextId = isTheLast ? 0 : idNum + 1
 
