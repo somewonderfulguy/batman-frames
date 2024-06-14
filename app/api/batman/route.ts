@@ -5,10 +5,12 @@ export const POST = async (req: NextRequest): Promise<Response> => {
   const _id = searchParams.get('id')
   const id = _id ? Number(_id) : 0
 
+  console.log(_id, id)
+
   const isTheLast = id === 4
 
   const nextId = isTheLast ? '00' : String(id + 1).padStart(2, '0')
-  const buttonText = isTheLast ? 'Start Over' : 'Next Image'
+  const buttonText = isTheLast ? 'Start Over' : 'Next Image' + nextId
   const image = `${process.env.NEXT_PUBLIC_SITE_URL}/batman-${nextId}.jpg`
 
   return new NextResponse(`<!DOCTYPE html><html><head>
